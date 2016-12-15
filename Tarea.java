@@ -8,4 +8,19 @@ public class Tarea
         tarea = nuevaTarea;
         completada = false;
     }
+    
+    public String getTarea()
+    {
+        return tarea;
+    }
+    
+    public boolean getCompletada()
+    {
+        return completada;
+    }
+    
+    public void setCompletada()
+    {
+        completada = true;
+    }
 }

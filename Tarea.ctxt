@@ -1,4 +1,10 @@
 #BlueJ class context
 comment0.params=nuevaTarea
 comment0.target=Tarea(java.lang.String)
-numComments=1
+comment1.params=
+comment1.target=java.lang.String\ getTarea()
+comment2.params=
+comment2.target=boolean\ getCompletada()
+comment3.params=
+comment3.target=void\ setCompletada()
+numComments=4

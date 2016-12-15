@@ -15,4 +15,18 @@ public class ListaTareas
         listaTareas.add(tareaNuevo);
     }
     
+    public void verTodasLasTareas()
+    {
+        int x = 1;
+        for (Tarea tarea : listaTareas){
+            System.out.println(x + ". " + tarea.getTarea() + " > " + tarea.getCompletada());
+            x++;
+        }
+    }
+    
+    public void marCompletada(int numeroTarea)
+    {
+        int numero = numeroTarea - 1;
+        listaTareas.get(numero).setCompletada();
+    }
 }
