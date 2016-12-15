@@ -1,21 +1,11 @@
-
-/**
- * Write a description of class Tarea here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
 public class Tarea
 {
-    private String descripcion;
+    private String tarea;
+    private boolean completada;
     
-    public Tarea()
+    public Tarea(String nuevaTarea)
     {
-        descripcion = "";
-    }
-    
-    public void descripcionTarea(String nuevaTarea)
-    {
-        descripcion = nuevaTarea;
+        tarea = nuevaTarea;
+        completada = false;
     }
 }
