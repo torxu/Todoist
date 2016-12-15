@@ -14,9 +14,16 @@ public class Tarea
         return tarea;
     }
     
-    public boolean getCompletada()
+    public String getCompletada()
     {
-        return completada;
+        String completado = completada + "";
+        if(completada == true){
+            completado = "Completado";
+        }
+        else{
+            completado = "Pendiente";
+        }
+        return completado;
     }
     
     public void setCompletada()

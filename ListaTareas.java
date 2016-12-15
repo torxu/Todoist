@@ -17,14 +17,14 @@ public class ListaTareas
     
     public void verTodasLasTareas()
     {
-        int x = 1;
+        int numeroTarea = 1;
         for (Tarea tarea : listaTareas){
-            System.out.println(x + ". " + tarea.getTarea() + " > " + tarea.getCompletada());
-            x++;
+           System.out.println(numeroTarea + ". " + tarea.getTarea() + " > " + tarea.getCompletada());
+           numeroTarea++;
         }
     }
     
-    public void marCompletada(int numeroTarea)
+    public void marcarCompletada(int numeroTarea)
     {
         int numero = numeroTarea - 1;
         listaTareas.get(numero).setCompletada();

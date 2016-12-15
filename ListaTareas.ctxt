@@ -6,5 +6,5 @@ comment1.target=void\ a\u00F1adirTarea(java.lang.String)
 comment2.params=
 comment2.target=void\ verTodasLasTareas()
 comment3.params=numeroTarea
-comment3.target=void\ marCompletada(int)
+comment3.target=void\ marcarCompletada(int)
 numComments=4
