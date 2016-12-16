@@ -51,4 +51,10 @@ public class ListaTareas
             listaTareas.remove(numeroTarea);
         }
     }
+    
+    public void definirPrioridad(int prioridad)
+    {
+        int numero = prioridad;
+        listaTareas.setPrioridad(prioridad);
+    }
 }
