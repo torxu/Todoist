@@ -18,7 +18,7 @@ public class Tarea
     {
         String completado = completada + "";
         if(completada == true){
-            completado = "Completado";
+            completado = "Completada";
         }
         else{
             completado = "Pendiente";

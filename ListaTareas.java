@@ -27,6 +27,28 @@ public class ListaTareas
     public void marcarCompletada(int numeroTarea)
     {
         int numero = numeroTarea - 1;
-        listaTareas.get(numero).setCompletada();
+        if(numero >=0 && numero < listaTareas.size()){
+            listaTareas.get(numero).setCompletada();
+        }
+    }
+    
+    public void mostrarCoincidencias(String buscar)
+    {
+        int posicion = 0;
+        while (posicion < listaTareas.size()){
+            Tarea tareaActual = listaTareas.get(posicion);
+            if (tareaActual.getTarea().contains(buscar)){
+                System.out.println((posicion + 1) + ". " + tareaActual.getTarea() + " > " + tareaActual.getCompletada());
+            }
+            posicion++;
+        }
+    }
+    
+    public void eliminarTarea(int tareaAEliminar)
+    {
+        int numeroTarea = tareaAEliminar - 1;
+        if(numeroTarea >= 0 && numeroTarea < listaTareas.size()){
+            listaTareas.remove(numeroTarea);
+        }
     }
 }
