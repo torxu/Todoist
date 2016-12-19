@@ -19,8 +19,13 @@ public class ListaTareas
     {
         int numeroTarea = 1;
         for (Tarea tarea : listaTareas){
-           System.out.println(numeroTarea + ". " + tarea.getTarea() + " > " + tarea.getCompletada());
-           numeroTarea++;
+           if(tarea.getFecha() == null){
+               System.out.println(numeroTarea + ". " + tarea.getTarea() + " > " + tarea.getCompletada() + "| Prioridad: " + tarea.getPrioridad() + "| No hay fecha de vencimiento");
+            }
+            else{
+                System.out.println(numeroTarea + ". " + tarea.getTarea() + " > " + tarea.getCompletada() + "| Prioridad: " + tarea.getPrioridad() + "| Hasta: " + tarea.getFecha());
+           }
+            numeroTarea++;
         }
     }
     
@@ -52,9 +57,21 @@ public class ListaTareas
         }
     }
     
-    public void definirPrioridad(int prioridad)
+    public void definirPrioridad(int prioridad, int numeroTarea)
     {
-        int numero = prioridad;
-        listaTareas.setPrioridad(prioridad);
+        int numero = numeroTarea - 1;
+        if(numero >= 0 && numero < listaTareas.size()){
+                if(prioridad >= 0 && prioridad <= 5){
+                       listaTareas.get(numero).setPrioridad(prioridad);
+                    }
+        }
+    }
+    
+    public void definirFecha(int año, int mes, int dia, int numeroTarea)
+    {
+        int numero = numeroTarea -1;
+        if(numero >= 0 && numero < listaTareas.size()){
+            listaTareas.get(numero).setFecha(año, mes, dia);
+        }
     }
 }

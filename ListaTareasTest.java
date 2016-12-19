@@ -15,6 +15,8 @@ public class ListaTareasTest
 {
     private ListaTareas listaTar1;
 
+    
+
     /**
      * Default constructor for test class ListaTareasTest
      */
@@ -35,6 +37,8 @@ public class ListaTareasTest
         listaTar1.añadirTarea("correr");
         listaTar1.añadirTarea("jugar");
         listaTar1.añadirTarea("dormir");
+        listaTar1.verTodasLasTareas();
+        listaTar1.definirFecha(1995, 2, 23, 2);
         listaTar1.verTodasLasTareas();
     }
 
